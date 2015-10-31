@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2015 Alexander Martinz
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <alexander.martinz.libs.materialpreferences.MaterialPreference
+        style="@style/MaterialPreferences.Default"
+        app:prefSummary="@string/dummy_standalone_summary"
+        app:prefTitle="@string/app_name" />
+
+    <alexander.martinz.libs.materialpreferences.MaterialPreference
+        style="@style/MaterialPreferences.Default"
+        app:prefAsCard="true"
+        app:prefIcon="@mipmap/ic_launcher"
+        app:prefSummary="@string/dummy_standalone_card_summary"
+        app:prefTitle="@string/app_name" />
+
+    <!-- category with all preferences -->
+    <alexander.martinz.libs.materialpreferences.MaterialPreferenceCategory
+        style="@style/MaterialPreferences.Default"
+        app:prefTitle="@string/category_dummy_title">
+
+        <alexander.martinz.libs.materialpreferences.MaterialListPreference
+            android:id="@+id/list_dummy_one"
+            style="@style/MaterialPreferences.Default"
+            app:prefEntries="@array/list_dummy_one_entries"
+            app:prefEntryValues="@array/list_dummy_one_values"
+            app:prefKey="list_dummy_one"
+            app:prefSummary="@string/list_dummy_one_summary"
+            app:prefTitle="@string/list_dummy_one_title" />
+
+        <alexander.martinz.libs.materialpreferences.MaterialEditTextPreference
+            android:id="@+id/edittext_dummy_one"
+            style="@style/MaterialPreferences.Default"
+            app:prefDefaultValue="1337"
+            app:prefKey="edittext_dummy_one"
+            app:prefSummary="@string/edittext_dummy_one_summary"
+            app:prefTextColor="?attr/colorAccent"
+            app:prefTextSize="16"
+            app:prefTitle="@string/edittext_dummy_one_title" />
+
+        <alexander.martinz.libs.materialpreferences.MaterialSwitchPreference
+            android:id="@+id/switch_dummy_one"
+            style="@style/MaterialPreferences.Default"
+            app:prefDefaultValue="true"
+            app:prefKey="switch_dummy_one"
+            app:prefSummary="@string/switch_dummy_one_summary"
+            app:prefTitle="@string/switch_dummy_one_title" />
+
+        <alexander.martinz.libs.materialpreferences.MaterialSwitchPreference
+            android:id="@+id/switch_dummy_two"
+            style="@style/MaterialPreferences.Default"
+            app:prefKey="switch_dummy_two"
+            app:prefSummary="@string/switch_dummy_two_summary"
+            app:prefTitle="@string/switch_dummy_two_title" />
+
+    </alexander.martinz.libs.materialpreferences.MaterialPreferenceCategory>
+
+    <!-- category with dynamically added preferences -->
+    <alexander.martinz.libs.materialpreferences.MaterialPreferenceCategory
+        android:id="@+id/category_dynamic"
+        style="@style/MaterialPreferences.Default"
+        app:prefTitle="@string/category_dynamic_title" />
+
+    <!-- PREFERENCES STANDALONE AS CARD START -->
+
+    <alexander.martinz.libs.materialpreferences.MaterialListPreference
+        style="@style/MaterialPreferences.Default"
+        app:prefAsCard="true"
+        app:prefEntries="@array/list_dummy_one_entries"
+        app:prefEntryValues="@array/list_dummy_one_values"
+        app:prefSummary="@string/list_dummy_one_summary"
+        app:prefTitle="@string/list_dummy_one_title" />
+
+    <alexander.martinz.libs.materialpreferences.MaterialEditTextPreference
+        style="@style/MaterialPreferences.Default"
+        app:prefAsCard="true"
+        app:prefDefaultValue="1337"
+        app:prefSummary="@string/edittext_dummy_one_summary"
+        app:prefTextColor="?attr/colorAccent"
+        app:prefTextSize="16"
+        app:prefTitle="@string/edittext_dummy_one_title" />
+
+    <alexander.martinz.libs.materialpreferences.MaterialSwitchPreference
+        style="@style/MaterialPreferences.Default"
+        app:prefAsCard="true"
+        app:prefDefaultValue="true"
+        app:prefSummary="@string/switch_dummy_one_summary"
+        app:prefTitle="@string/switch_dummy_one_title" />
+
+    <alexander.martinz.libs.materialpreferences.MaterialSwitchPreference
+        style="@style/MaterialPreferences.Default"
+        app:prefAsCard="true"
+        app:prefSummary="@string/switch_dummy_two_summary"
+        app:prefTitle="@string/switch_dummy_two_title" />
+
+    <!-- PREFERENCES STANDALONE AS CARD END -->
+
+    <!-- category just to fill some space -->
+    <alexander.martinz.libs.materialpreferences.MaterialPreferenceCategory
+        style="@style/MaterialPreferences.Default"
+        app:prefIcon="@mipmap/ic_launcher"
+        app:prefTitle="@string/category_dummy_icon_title">
+
+        <alexander.martinz.libs.materialpreferences.MaterialPreference
+            style="@style/MaterialPreferences.Default"
+            app:prefSummary="@string/dummy_summary"
+            app:prefTitle="@string/app_name" />
+
+        <alexander.martinz.libs.materialpreferences.MaterialPreference
+            style="@style/MaterialPreferences.Default"
+            app:prefSummary="@string/dummy_summary"
+            app:prefTitle="@string/app_name" />
+
+        <alexander.martinz.libs.materialpreferences.MaterialPreference
+            style="@style/MaterialPreferences.Default"
+            app:prefSummary="@string/dummy_summary"
+            app:prefTitle="@string/app_name" />
+
+        <alexander.martinz.libs.materialpreferences.MaterialPreference
+            style="@style/MaterialPreferences.Default"
+            app:prefSummary="@string/dummy_summary"
+            app:prefTitle="@string/app_name" />
+
+    </alexander.martinz.libs.materialpreferences.MaterialPreferenceCategory>
+
+</LinearLayout>
